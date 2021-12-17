@@ -1,79 +1,92 @@
-/*
-Math Practice App Style Sheet
-*/
+:root {
+  --bg-grad-1: white;
+  --bg-grad-2: rgba(0, 4, 255, 0.336);
+  --bg-banner: rgb(255, 255, 255);
+}
 
 html {
-  height: 100%;
   font-family: verdana;
 }
 
 
 body {
-  background-image: linear-gradient(white, rgb(116, 101, 204));
+  background-image: linear-gradient(var(--bg-grad-1), var(--bg-grad-2));
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-size: 35px;
 }
 
 .top-banner {
-  width: 100%;
-  height: 20%;
-  background-color: rgb(3, 5, 75);
-}
-
-#top-banner__image {
-  width: 200px;
-  height: 50px;
-  border-radius: 50%;
-  margin: auto;
-}
-
-.top-banner__title {
+  background-color: var(--bg-banner);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
   font-family: 'Antic Slab', serif;
 }
 
-.contact-info {
-  color: white;
-  font-size: 16px;
+#top-banner__image {
+  padding: 2px;
 }
 
-.main-page-body {
-  margin: 1% 10% 1% 10%;
+.top-banner {
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.top-banner__title {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+
+#math-app {
+  max-width: 700px;
+}
+
+.problem-param-input {
+  width: 100px;
+  margin: 5px;
 }
 
 .problem {
-  margin: 10px;
-  font-size: 16px;
+  margin-top: 5px;
 }
 
-.correct {
+.problem__statement {
+  padding: 0;
+}
+
+.problem__answer {
+  padding-left: 2px;
+}
+
+.answer-input {
+  width: 75px;
+}
+
+.problem__grade {
+  padding-left: 2px;
+  padding-top: 5px;
+}
+
+.correct, .perfect {
   color: green;
 }
 
-.incorrect {
+.good {
+  color: yellow;
+}
+
+.incorrect, .bad {
   color: red;
 }
 
-#grade {
-  border: 5px solid black;
-  background-color: rgb(214, 207, 207);
-  padding: .5em;
-  font-size: 20px;
+
+@media only screen and (max-width: 576px) {
+  .problem__grade {
+    font-size: 10px;
+  }
+
+  .top-banner__title {
+    font-size: 20px;
+  }
 }
-
-
-
-
-
-
-.footer {
-  position: static;
-  bottom: 0;
-  margin-top: 1%;
-  color: black;
-}
-
-
-
-
-
